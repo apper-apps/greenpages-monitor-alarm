@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import React, { useState } from "react";
 import { UserProvider } from "@/context/UserContext";
@@ -74,7 +74,7 @@ function App() {
 
 return (
     <UserProvider>
-      <Router>
+<BrowserRouter>
         <div className="min-h-screen bg-gray-50">
           <Header />
         <main>
@@ -105,7 +105,7 @@ return (
           style={{ zIndex: 9999 }}
         />
 </div>
-      </Router>
+      </BrowserRouter>
     </UserProvider>
   );
 }
