@@ -1,20 +1,20 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import React, { useState } from "react";
-import { UserProvider } from "@/context/UserContext";
-import UserProfile from "@/components/pages/UserProfile";
-import Membership from "@/components/pages/Membership";
-import UserManagement from "@/components/pages/UserManagement";
 import Loading from "@/components/ui/Loading";
 import Header from "@/components/organisms/Header";
 import HowItWorks from "@/components/pages/HowItWorks";
 import Browse from "@/components/pages/Browse";
+import UserManagement from "@/components/pages/UserManagement";
+import Membership from "@/components/pages/Membership";
 import StrainDetail from "@/components/pages/StrainDetail";
 import AddStrain from "@/components/pages/AddStrain";
 import Dashboard from "@/components/pages/Dashboard";
 import EditStrain from "@/components/pages/EditStrain";
+import UserProfile from "@/components/pages/UserProfile";
 import AgeVerificationModal from "@/components/molecules/AgeVerificationModal";
 import useAgeVerification from "@/hooks/useAgeVerification";
+import { UserProvider } from "@/context/UserContext";
 
 function App() {
   const { isVerified, isLoading, verify } = useAgeVerification();

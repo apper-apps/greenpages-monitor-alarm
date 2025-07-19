@@ -1,9 +1,21 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Button from '@/components/atoms/Button';
-import Input from '@/components/atoms/Input';
-import ApperIcon from '@/components/ApperIcon';
-import { useUser } from '@/context/UserContext';
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import ApperIcon from "@/components/ApperIcon";
+import Select from "@/components/atoms/Select";
+import Input from "@/components/atoms/Input";
+import Button from "@/components/atoms/Button";
+import { useUser } from "@/context/UserContext";
+
+const legalStates = [
+  'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+  'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+  'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
+  'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+  'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+  'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia',
+  'Wisconsin', 'Wyoming'
+];
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [isLogin, setIsLogin] = useState(true);
@@ -13,7 +25,10 @@ const LoginModal = ({ isOpen, onClose }) => {
     password: '',
     firstName: '',
     lastName: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    birthDate: '',
+    state: '',
+    isLocationDetected: false
   });
   const [errors, setErrors] = useState({});
 
@@ -49,12 +64,18 @@ const LoginModal = ({ isOpen, onClose }) => {
       newErrors.password = 'Password must be at least 6 characters';
     }
 
-    if (!isLogin) {
+if (!isLogin) {
       if (!formData.firstName) {
         newErrors.firstName = 'First name is required';
       }
       if (!formData.lastName) {
         newErrors.lastName = 'Last name is required';
+      }
+      if (!formData.birthDate) {
+        newErrors.birthDate = 'Date of birth is required';
+      }
+      if (!formData.state) {
+        newErrors.state = 'State is required';
       }
       if (!formData.confirmPassword) {
         newErrors.confirmPassword = 'Please confirm your password';
@@ -65,6 +86,44 @@ const LoginModal = ({ isOpen, onClose }) => {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  };
+
+  const detectLocation = async () => {
+    if (!navigator.geolocation) {
+      setErrors(prev => ({
+        ...prev,
+        state: 'Geolocation is not supported by this browser'
+      }));
+      return;
+    }
+
+    try {
+      const position = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, {
+          timeout: 10000,
+          enableHighAccuracy: true
+        });
+      });
+
+      setFormData(prev => ({
+        ...prev,
+        isLocationDetected: true
+      }));
+
+      // Clear any previous state errors
+      if (errors.state) {
+        setErrors(prev => ({
+          ...prev,
+          state: ''
+        }));
+      }
+    } catch (error) {
+      console.error('Location detection failed:', error);
+      setErrors(prev => ({
+        ...prev,
+        state: 'Unable to detect location. Please select manually.'
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -78,12 +137,14 @@ const LoginModal = ({ isOpen, onClose }) => {
           email: formData.email,
           password: formData.password
         });
-      } else {
+} else {
         await register({
           email: formData.email,
           password: formData.password,
           firstName: formData.firstName,
-          lastName: formData.lastName
+          lastName: formData.lastName,
+          birthDate: formData.birthDate,
+          state: formData.state
         });
       }
       onClose();
@@ -95,13 +156,16 @@ const LoginModal = ({ isOpen, onClose }) => {
     }
   };
 
-  const resetForm = () => {
+const resetForm = () => {
     setFormData({
       email: '',
       password: '',
       firstName: '',
       lastName: '',
-      confirmPassword: ''
+      confirmPassword: '',
+      birthDate: '',
+      state: '',
+      isLocationDetected: false
     });
     setErrors({});
   };
@@ -169,6 +233,55 @@ const LoginModal = ({ isOpen, onClose }) => {
                       />
                     </div>
                   </div>
+)}
+
+                {!isLogin && (
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+                      <Input
+                        name="birthDate"
+                        type="date"
+                        value={formData.birthDate}
+                        onChange={handleInputChange}
+                        error={errors.birthDate}
+                        max={new Date().toISOString().split("T")[0]}
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
+                      <div className="space-y-2">
+                        <div className="flex gap-2">
+                          <select
+                            name="state"
+                            value={formData.state}
+                            onChange={handleInputChange}
+                            className="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-forest-green focus:border-transparent"
+                          >
+                            <option value="">Select your state</option>
+                            {legalStates.map((state) => (
+                              <option key={state} value={state}>{state}</option>
+                            ))}
+                          </select>
+                          <button
+                            type="button"
+                            onClick={detectLocation}
+                            className="px-3 py-2 text-forest-green border border-forest-green rounded-md hover:bg-forest-green hover:text-white transition-colors"
+                            title="Detect location"
+                          >
+                            <ApperIcon name="MapPin" className="w-4 h-4" />
+                          </button>
+                        </div>
+                        {errors.state && (
+                          <p className="text-sm text-red-600">{errors.state}</p>
+                        )}
+                        {formData.isLocationDetected && (
+                          <p className="text-xs text-green-600">Location detected - please select your state above</p>
+                        )}
+                      </div>
+                    </div>
+                  </>
                 )}
 
                 <Input
@@ -199,7 +312,6 @@ const LoginModal = ({ isOpen, onClose }) => {
                     error={errors.confirmPassword}
                   />
                 )}
-
                 <Button
                   type="submit"
                   variant="primary"

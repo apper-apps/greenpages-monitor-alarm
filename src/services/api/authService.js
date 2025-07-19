@@ -1,5 +1,4 @@
-import mockUsers from '@/services/mockData/users.json';
-
+import mockUsers from "@/services/mockData/users.json";
 // Simulate logged-in user storage
 let currentUser = null;
 
@@ -39,7 +38,7 @@ const authService = {
     const existingUser = mockUsers.find(u => u.email.toLowerCase() === email.toLowerCase());
     if (existingUser) {
       throw new Error('User already exists with this email');
-    }
+}
     
     // Create new user
     const newUser = {
@@ -48,6 +47,8 @@ const authService = {
       password,
       firstName,
       lastName,
+      birthDate: '',
+      state: '',
       role: 'user',
       membershipTier: 'Basic',
       joinDate: new Date().toISOString().split('T')[0],
