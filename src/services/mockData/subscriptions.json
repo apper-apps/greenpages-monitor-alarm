@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "sellerId": "seller1",
+    "status": "active",
+    "plan": "yearly",
+    "daysRemaining": 45,
+    "expiryDate": "2024-03-15T00:00:00Z",
+    "lastPayment": "2023-03-15T00:00:00Z",
+    "nextBilling": "2024-03-15T00:00:00Z",
+    "amount": 300,
+    "createdAt": "2023-03-15T00:00:00Z"
+  },
+  {
+    "Id": 2,
+    "sellerId": "seller2",
+    "status": "expired",
+    "plan": "monthly",
+    "daysRemaining": 0,
+    "expiryDate": "2024-01-15T00:00:00Z",
+    "lastPayment": "2023-12-15T00:00:00Z",
+    "nextBilling": null,
+    "amount": 29,
+    "createdAt": "2023-12-15T00:00:00Z"
+  },
+  {
+    "Id": 3,
+    "sellerId": "seller3",
+    "status": "active",
+    "plan": "monthly",
+    "daysRemaining": 5,
+    "expiryDate": "2024-02-05T00:00:00Z",
+    "lastPayment": "2024-01-05T00:00:00Z",
+    "nextBilling": "2024-02-05T00:00:00Z",
+    "amount": 29,
+    "createdAt": "2024-01-05T00:00:00Z"
+  }
+]

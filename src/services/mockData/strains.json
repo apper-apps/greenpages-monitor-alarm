@@ -1,0 +1,202 @@
+[
+  {
+    "Id": 1,
+    "name": "Blue Dream",
+    "category": "hybrid",
+    "price": 15.50,
+    "thcLevel": 18.5,
+    "cbdLevel": 1.2,
+    "description": "A balanced hybrid strain that offers euphoric and creative effects. Perfect for daytime use with a sweet berry aroma.",
+    "effects": ["Euphoric", "Creative", "Relaxed", "Happy", "Uplifted"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller1",
+    "active": true,
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "OG Kush",
+    "category": "indica",
+    "price": 18.00,
+    "thcLevel": 22.3,
+    "cbdLevel": 0.8,
+    "description": "A classic indica strain known for its earthy, pine scent and strong relaxing effects. Great for evening use.",
+    "effects": ["Relaxed", "Sleepy", "Euphoric", "Hungry", "Stress Relief"],
+    "images": [
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller2",
+    "active": true,
+    "createdAt": "2024-01-16T14:20:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Sour Diesel",
+    "category": "sativa",
+    "price": 16.75,
+    "thcLevel": 20.1,
+    "cbdLevel": 0.5,
+    "description": "An energizing sativa with a distinctive diesel aroma. Provides mental stimulation and creativity boost.",
+    "effects": ["Energetic", "Creative", "Focused", "Happy", "Uplifted"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller1",
+    "active": true,
+    "createdAt": "2024-01-17T09:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "White Widow",
+    "category": "hybrid",
+    "price": 17.25,
+    "thcLevel": 19.8,
+    "cbdLevel": 1.5,
+    "description": "A balanced hybrid with white crystalline resin. Offers a burst of euphoria and energy followed by relaxation.",
+    "effects": ["Euphoric", "Energetic", "Creative", "Relaxed", "Happy"],
+    "images": [
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller2",
+    "active": true,
+    "createdAt": "2024-01-18T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Purple Haze",
+    "category": "sativa",
+    "price": 19.00,
+    "thcLevel": 17.5,
+    "cbdLevel": 0.9,
+    "description": "A legendary sativa strain with purple-tinted leaves. Delivers dreamy euphoria and bursts of creativity.",
+    "effects": ["Euphoric", "Creative", "Energetic", "Happy", "Focused"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller3",
+    "active": true,
+    "createdAt": "2024-01-19T11:30:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "Granddaddy Purple",
+    "category": "indica",
+    "price": 21.50,
+    "thcLevel": 24.2,
+    "cbdLevel": 1.8,
+    "description": "A potent indica with deep purple buds and a complex grape and berry aroma. Perfect for relaxation and sleep.",
+    "effects": ["Relaxed", "Sleepy", "Euphoric", "Happy", "Stress Relief"],
+    "images": [
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller1",
+    "active": true,
+    "createdAt": "2024-01-20T13:20:00Z"
+  },
+  {
+    "Id": 7,
+    "name": "Green Crack",
+    "category": "sativa",
+    "price": 14.80,
+    "thcLevel": 21.5,
+    "cbdLevel": 0.3,
+    "description": "A highly energetic sativa that provides sharp mental focus and creativity. Great for daytime productivity.",
+    "effects": ["Energetic", "Focused", "Creative", "Happy", "Uplifted"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller2",
+    "active": true,
+    "createdAt": "2024-01-21T08:45:00Z"
+  },
+  {
+    "Id": 8,
+    "name": "Girl Scout Cookies",
+    "category": "hybrid",
+    "price": 22.00,
+    "thcLevel": 25.1,
+    "cbdLevel": 0.7,
+    "description": "A premium hybrid with a sweet, earthy aroma. Delivers euphoria and relaxation with a touch of creativity.",
+    "effects": ["Euphoric", "Relaxed", "Creative", "Happy", "Stress Relief"],
+    "images": [
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller3",
+    "active": true,
+    "createdAt": "2024-01-22T15:10:00Z"
+  },
+  {
+    "Id": 9,
+    "name": "Gelato #41",
+    "category": "exotic",
+    "price": 28.50,
+    "thcLevel": 26.8,
+    "cbdLevel": 1.1,
+    "description": "An exotic strain with dessert-like flavors of sweet citrus and lavender. Offers balanced euphoria and relaxation.",
+    "effects": ["Euphoric", "Relaxed", "Creative", "Happy", "Uplifted"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller1",
+    "active": true,
+    "createdAt": "2024-01-23T12:00:00Z"
+  },
+  {
+    "Id": 10,
+    "name": "Wedding Cake",
+    "category": "exotic",
+    "price": 32.00,
+    "thcLevel": 29.2,
+    "cbdLevel": 0.9,
+    "description": "A rare exotic strain with vanilla and earthy pepper flavors. Delivers potent relaxation with euphoric undertones.",
+    "effects": ["Relaxed", "Euphoric", "Happy", "Sleepy", "Stress Relief"],
+    "images": [
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller2",
+    "active": true,
+    "createdAt": "2024-01-24T17:30:00Z"
+  },
+  {
+    "Id": 11,
+    "name": "Northern Lights",
+    "category": "indica",
+    "price": 16.00,
+    "thcLevel": 18.9,
+    "cbdLevel": 2.1,
+    "description": "A classic indica strain known for its resinous buds and relaxing effects. Perfect for stress relief and sleep.",
+    "effects": ["Relaxed", "Sleepy", "Happy", "Euphoric", "Stress Relief"],
+    "images": [
+      "https://images.unsplash.com/photo-1585945963270-6ad0ac04b89c?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller3",
+    "active": true,
+    "createdAt": "2024-01-25T10:15:00Z"
+  },
+  {
+    "Id": 12,
+    "name": "Jack Herer",
+    "category": "sativa",
+    "price": 18.75,
+    "thcLevel": 23.1,
+    "cbdLevel": 0.6,
+    "description": "A legendary sativa strain that delivers clear-headed and creative effects. Named after the cannabis activist.",
+    "effects": ["Creative", "Energetic", "Focused", "Happy", "Uplifted"],
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512634841633-33bd7cedc288?w=800&h=600&fit=crop"
+    ],
+    "sellerId": "seller1",
+    "active": true,
+    "createdAt": "2024-01-26T14:40:00Z"
+  }
+]
