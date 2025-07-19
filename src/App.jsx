@@ -91,8 +91,8 @@ return (
           </Routes>
         </main>
 
-        <ToastContainer
-          position="top-right"
+<ToastContainer
+          position="top-center"
           autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -102,7 +102,10 @@ return (
           draggable
           pauseOnHover
           theme="light"
-          style={{ zIndex: 9999 }}
+          style={{ 
+            zIndex: 1000,
+            marginTop: '80px'
+          }}
         />
 </div>
       </BrowserRouter>

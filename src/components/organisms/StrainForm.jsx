@@ -7,13 +7,22 @@ import Button from "@/components/atoms/Button";
 import Card from "@/components/atoms/Card";
 import ApperIcon from "@/components/ApperIcon";
 import { createStrain, updateStrain, getStrainById } from "@/services/api/strainService";
+import { useUser } from "@/context/UserContext";
 import { toast } from "react-toastify";
-
 const StrainForm = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { user, isAuthenticated } = useUser();
   const isEditing = Boolean(id);
 
+  // Check authentication on component mount
+  useEffect(() => {
+    if (!isAuthenticated) {
+      toast.error("Please log in to access strain management");
+      navigate("/");
+      return;
+    }
+  }, [isAuthenticated, navigate]);
   const [formData, setFormData] = useState({
     name: "",
     category: "",
@@ -124,7 +133,23 @@ const StrainForm = () => {
     } finally {
       setLoading(false);
     }
-  };
+};
+
+  // Don't render form if user is not authenticated
+  if (!isAuthenticated || !user) {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <Card className="p-6 text-center">
+          <ApperIcon name="Lock" className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <h2 className="text-xl font-display font-bold text-gray-900 mb-2">Authentication Required</h2>
+          <p className="text-gray-600 mb-4">You must be logged in and verified to list strains.</p>
+          <Button onClick={() => navigate("/")} variant="primary">
+            Go to Home
+          </Button>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto">
