@@ -1,0 +1,71 @@
+[
+  {
+    "Id": 1,
+    "name": "Basic",
+    "price": 0,
+    "billingPeriod": "monthly",
+    "description": "Get started with basic access to GreenPages",
+    "features": [
+      "Browse strain listings",
+      "Contact sellers",
+      "Basic search filters",
+      "Community access"
+    ],
+    "limits": {
+      "strainListings": 0,
+      "premiumSupport": false,
+      "advancedAnalytics": false,
+      "priorityPlacement": false
+    },
+    "color": "gray",
+    "isPopular": false
+  },
+  {
+    "Id": 2,
+    "name": "Pro",
+    "price": 29.99,
+    "billingPeriod": "monthly",
+    "description": "Perfect for active buyers and small-scale sellers",
+    "features": [
+      "Everything in Basic",
+      "List up to 5 strains",
+      "Advanced search filters",
+      "Priority customer support",
+      "Basic analytics dashboard",
+      "Seller verification badge"
+    ],
+    "limits": {
+      "strainListings": 5,
+      "premiumSupport": true,
+      "advancedAnalytics": false,
+      "priorityPlacement": false
+    },
+    "color": "forest-green",
+    "isPopular": true
+  },
+  {
+    "Id": 3,
+    "name": "Premium",
+    "price": 99.99,
+    "billingPeriod": "monthly",
+    "description": "For serious sellers and cannabis businesses",
+    "features": [
+      "Everything in Pro",
+      "Unlimited strain listings",
+      "Advanced analytics & insights",
+      "Priority placement in search",
+      "24/7 dedicated support",
+      "Custom seller profile",
+      "Marketing tools & promotions",
+      "API access"
+    ],
+    "limits": {
+      "strainListings": -1,
+      "premiumSupport": true,
+      "advancedAnalytics": true,
+      "priorityPlacement": true
+    },
+    "color": "exotic-gold",
+    "isPopular": false
+  }
+]

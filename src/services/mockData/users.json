@@ -1,0 +1,116 @@
+[
+  {
+    "Id": 1,
+    "email": "admin@greenpages.com",
+    "password": "admin123",
+    "firstName": "John",
+    "lastName": "Administrator",
+    "role": "admin",
+    "membershipTier": "Premium",
+    "joinDate": "2023-01-15",
+    "isActive": true,
+    "avatar": null,
+    "phone": "+1-555-0101",
+    "address": "123 Admin St, Denver, CO 80202",
+    "preferences": {
+      "notifications": true,
+      "newsletter": true,
+      "marketingEmails": true
+    }
+  },
+  {
+    "Id": 2,
+    "email": "sarah.seller@email.com",
+    "password": "seller123",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "role": "seller",
+    "membershipTier": "Pro",
+    "joinDate": "2023-02-20",
+    "isActive": true,
+    "avatar": null,
+    "phone": "+1-555-0102",
+    "address": "456 Cannabis Ave, Boulder, CO 80301",
+    "preferences": {
+      "notifications": true,
+      "newsletter": true,
+      "marketingEmails": false
+    }
+  },
+  {
+    "Id": 3,
+    "email": "mike.buyer@email.com",
+    "password": "buyer123",
+    "firstName": "Mike",
+    "lastName": "Chen",
+    "role": "user",
+    "membershipTier": "Basic",
+    "joinDate": "2023-03-10",
+    "isActive": true,
+    "avatar": null,
+    "phone": "+1-555-0103",
+    "address": "789 Green St, Fort Collins, CO 80524",
+    "preferences": {
+      "notifications": true,
+      "newsletter": false,
+      "marketingEmails": false
+    }
+  },
+  {
+    "Id": 4,
+    "email": "emma.grower@email.com",
+    "password": "grower123",
+    "firstName": "Emma",
+    "lastName": "Rodriguez",
+    "role": "seller",
+    "membershipTier": "Premium",
+    "joinDate": "2023-01-30",
+    "isActive": true,
+    "avatar": null,
+    "phone": "+1-555-0104",
+    "address": "321 Cultivation Rd, Pueblo, CO 81001",
+    "preferences": {
+      "notifications": true,
+      "newsletter": true,
+      "marketingEmails": true
+    }
+  },
+  {
+    "Id": 5,
+    "email": "alex.user@email.com",
+    "password": "user123",
+    "firstName": "Alex",
+    "lastName": "Thompson",
+    "role": "user",
+    "membershipTier": "Pro",
+    "joinDate": "2023-04-05",
+    "isActive": true,
+    "avatar": null,
+    "phone": "+1-555-0105",
+    "address": "654 User Lane, Colorado Springs, CO 80903",
+    "preferences": {
+      "notifications": false,
+      "newsletter": true,
+      "marketingEmails": false
+    }
+  },
+  {
+    "Id": 6,
+    "email": "inactive.user@email.com",
+    "password": "inactive123",
+    "firstName": "Inactive",
+    "lastName": "User",
+    "role": "user",
+    "membershipTier": "Basic",
+    "joinDate": "2022-12-01",
+    "isActive": false,
+    "avatar": null,
+    "phone": "+1-555-0106",
+    "address": "999 Inactive St, Denver, CO 80202",
+    "preferences": {
+      "notifications": false,
+      "newsletter": false,
+      "marketingEmails": false
+    }
+  }
+]

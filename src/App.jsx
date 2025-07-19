@@ -1,13 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { useState } from "react";
+import React, { useState } from "react";
+import { UserProvider } from "@/context/UserContext";
+import UserProfile from "@/components/pages/UserProfile";
+import Membership from "@/components/pages/Membership";
+import UserManagement from "@/components/pages/UserManagement";
+import Loading from "@/components/ui/Loading";
 import Header from "@/components/organisms/Header";
+import HowItWorks from "@/components/pages/HowItWorks";
 import Browse from "@/components/pages/Browse";
 import StrainDetail from "@/components/pages/StrainDetail";
-import Dashboard from "@/components/pages/Dashboard";
 import AddStrain from "@/components/pages/AddStrain";
+import Dashboard from "@/components/pages/Dashboard";
 import EditStrain from "@/components/pages/EditStrain";
-import HowItWorks from "@/components/pages/HowItWorks";
 import AgeVerificationModal from "@/components/molecules/AgeVerificationModal";
 import useAgeVerification from "@/hooks/useAgeVerification";
 
@@ -67,19 +72,22 @@ function App() {
     );
   }
 
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        
+return (
+    <UserProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Header />
         <main>
-          <Routes>
+<Routes>
             <Route path="/" element={<Browse />} />
             <Route path="/strain/:id" element={<StrainDetail />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/add" element={<AddStrain />} />
             <Route path="/dashboard/edit/:id" element={<EditStrain />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/membership" element={<Membership />} />
+            <Route path="/admin/users" element={<UserManagement />} />
           </Routes>
         </main>
 
@@ -96,8 +104,9 @@ function App() {
           theme="light"
           style={{ zIndex: 9999 }}
         />
-      </div>
-    </Router>
+</div>
+      </Router>
+    </UserProvider>
   );
 }
 
