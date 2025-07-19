@@ -117,11 +117,32 @@ if (!isLogin) {
           state: ''
         }));
       }
-    } catch (error) {
+} catch (error) {
       console.error('Location detection failed:', error);
+      
+      let errorMessage = 'Unable to detect location. Please select manually.';
+      
+      // Handle specific geolocation error codes
+      if (error.code !== undefined) {
+        switch (error.code) {
+          case 1: // PERMISSION_DENIED
+            errorMessage = 'Location access denied. Please enable location services and try again.';
+            break;
+          case 2: // POSITION_UNAVAILABLE
+            errorMessage = 'Location information unavailable. Please select your state manually.';
+            break;
+          case 3: // TIMEOUT
+            errorMessage = 'Location request timed out. Please select your state manually.';
+            break;
+          default:
+            errorMessage = 'Unable to detect location. Please select manually.';
+        }
+        console.error(`Geolocation error code: ${error.code}, message: ${error.message || 'No message'}`);
+      }
+      
       setErrors(prev => ({
         ...prev,
-        state: 'Unable to detect location. Please select manually.'
+        state: errorMessage
       }));
     }
   };
