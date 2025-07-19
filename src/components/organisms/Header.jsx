@@ -277,9 +277,11 @@ List Your Strain
                 </Button>
               </div>
             )}
-          </div>
+</div>
         </div>
       </motion.div>
+
+      <LoginModal
         isOpen={showLoginModal}
         onClose={() => setShowLoginModal(false)}
       />
