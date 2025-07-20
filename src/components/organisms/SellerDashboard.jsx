@@ -103,8 +103,8 @@ const SellerDashboard = () => {
               <p className="text-sm text-gray-600 mb-1">Active Listings</p>
               <p className="text-2xl font-bold text-gray-900">{strains.filter(s => s.active).length}</p>
             </div>
-            <div className="w-12 h-12 bg-gradient-to-br from-forest-green to-leaf-green rounded-full flex items-center justify-center">
-              <ApperIcon name="List" className="w-6 h-6 text-white" />
+<div className="w-16 h-16 bg-gradient-to-br from-forest-green via-medium-green to-leaf-green rounded-xl flex items-center justify-center shadow-lg">
+              <ApperIcon name="List" className="w-8 h-8 text-white" />
             </div>
           </div>
         </Card>
@@ -115,8 +115,8 @@ const SellerDashboard = () => {
               <p className="text-sm text-gray-600 mb-1">Total Listings</p>
               <p className="text-2xl font-bold text-gray-900">{strains.length}</p>
             </div>
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-              <ApperIcon name="Package" className="w-6 h-6 text-white" />
+<div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+              <ApperIcon name="Package" className="w-8 h-8 text-white" />
             </div>
           </div>
         </Card>
@@ -129,8 +129,8 @@ const SellerDashboard = () => {
                 {subscription?.status || "Unknown"}
               </Badge>
             </div>
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-              <ApperIcon name="CreditCard" className="w-6 h-6 text-white" />
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg">
+              <ApperIcon name="CreditCard" className="w-8 h-8 text-white" />
             </div>
           </div>
         </Card>

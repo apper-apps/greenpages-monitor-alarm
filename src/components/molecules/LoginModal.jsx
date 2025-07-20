@@ -209,7 +209,7 @@ return (
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+className="absolute inset-0 bg-black/70 backdrop-blur-md"
             onClick={handleClose}
           />
           
@@ -217,7 +217,7 @@ return (
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative bg-white rounded-xl shadow-xl w-full max-w-md mx-auto"
+className="relative glass rounded-2xl shadow-2xl w-full max-w-md mx-auto backdrop-blur-xl border border-white/30"
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">

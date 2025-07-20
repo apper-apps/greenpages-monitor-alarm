@@ -19,9 +19,9 @@ const CategoryTabs = ({ activeCategory, onCategoryChange }) => {
           onClick={() => onCategoryChange(category.id)}
           className={cn(
             "flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105",
-            activeCategory === category.id
-              ? "bg-gradient-to-r from-forest-green to-medium-green text-white shadow-lg"
-              : "bg-white border border-gray-200 text-gray-600 hover:border-forest-green hover:text-forest-green hover:shadow-md"
+activeCategory === category.id
+              ? "bg-gradient-to-r from-forest-green via-medium-green to-leaf-green text-white shadow-xl border border-white/20 animate-gradient"
+              : "glass border border-gray-200/50 text-gray-600 hover:border-forest-green hover:text-forest-green hover:shadow-lg backdrop-blur-md"
           )}
         >
           <ApperIcon name={category.icon} className={cn("w-4 h-4", activeCategory === category.id ? "text-white" : category.color)} />

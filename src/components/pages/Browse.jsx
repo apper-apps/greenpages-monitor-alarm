@@ -37,7 +37,7 @@ const Browse = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+<div className="min-h-screen gradient-bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <motion.div
@@ -45,15 +45,15 @@ const Browse = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
+<h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
             Find Your Perfect
-            <span className="block bg-gradient-to-r from-forest-green to-leaf-green bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-forest-green via-medium-green to-leaf-green bg-clip-text text-transparent animate-gradient">
               Cannabis Strain
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+<p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Discover premium cannabis strains from verified sellers in legal states. 
-            Find exactly what you're looking for with detailed strain information.
+            Find exactly what you're looking for with detailed strain information and modern marketplace experience.
           </p>
         </motion.div>
 

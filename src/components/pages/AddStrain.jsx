@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import ApperIcon from "@/components/ApperIcon";
 import StrainForm from "@/components/organisms/StrainForm";
-import { useUser } from "@/context/UserContext";
 import Card from "@/components/atoms/Card";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
-import { toast } from "react-toastify";
+import { useUser } from "@/context/UserContext";
 
 const AddStrain = () => {
   const { user, isAuthenticated } = useUser();
@@ -22,7 +22,7 @@ const AddStrain = () => {
   // Show authentication required message if not logged in
   if (!isAuthenticated || !user) {
     return (
-      <div className="min-h-screen bg-gray-50">
+<div className="min-h-screen gradient-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-2xl mx-auto">
             <Card className="p-8 text-center">
@@ -61,9 +61,10 @@ const AddStrain = () => {
         </div>
       </div>
     );
-  }
+}
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen gradient-bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <StrainForm />
       </div>

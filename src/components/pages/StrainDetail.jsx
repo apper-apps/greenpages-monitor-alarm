@@ -91,7 +91,7 @@ const StrainDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+<div className="min-h-screen gradient-bg-secondary">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <button
@@ -184,9 +184,9 @@ const StrainDetail = () => {
                     <span className="text-sm font-medium text-gray-700">THC Level</span>
                     <span className="text-sm font-bold text-gray-900">{strain.thcLevel}%</span>
                   </div>
-                  <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+<div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
                     <div 
-                      className="h-full bg-gradient-to-r from-leaf-green to-forest-green rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-leaf-green via-medium-green to-forest-green rounded-full transition-all duration-1000 shadow-sm"
                       style={{ width: `${Math.min(strain.thcLevel, 100)}%` }}
                     />
                   </div>
@@ -197,9 +197,9 @@ const StrainDetail = () => {
                     <span className="text-sm font-medium text-gray-700">CBD Level</span>
                     <span className="text-sm font-bold text-gray-900">{strain.cbdLevel}%</span>
                   </div>
-                  <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+<div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden shadow-inner">
                     <div 
-                      className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-full transition-all duration-1000 shadow-sm"
                       style={{ width: `${Math.min(strain.cbdLevel, 100)}%` }}
                     />
                   </div>

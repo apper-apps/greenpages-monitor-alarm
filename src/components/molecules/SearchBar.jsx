@@ -43,7 +43,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 mb-6">
+<div className="form-modern rounded-xl shadow-lg border border-white/30 p-6 mb-8">
       <form onSubmit={handleSearch} className="space-y-4 md:space-y-0 md:flex md:items-end md:space-x-4">
         <div className="flex-1">
           <label className="block text-sm font-medium text-gray-700 mb-1">Search Strains</label>

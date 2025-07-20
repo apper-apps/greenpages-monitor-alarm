@@ -9,15 +9,15 @@ const Empty = ({
   className = "" 
 }) => {
   return (
-    <div className={`flex flex-col items-center justify-center py-16 px-4 text-center ${className}`}>
-      <div className="w-20 h-20 bg-gradient-to-br from-forest-green to-leaf-green rounded-full flex items-center justify-center mb-6 shadow-lg">
-        <ApperIcon name={icon} className="w-10 h-10 text-white" />
+<div className={`flex flex-col items-center justify-center py-20 px-6 text-center ${className}`}>
+      <div className="w-28 h-28 bg-gradient-to-br from-forest-green via-medium-green to-leaf-green rounded-full flex items-center justify-center mb-8 shadow-2xl backdrop-blur-md border border-white/30 animate-float">
+        <ApperIcon name={icon} className="w-14 h-14 text-white" />
       </div>
-      <h3 className="text-xl font-display font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-8 max-w-md leading-relaxed">{description}</p>
+      <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">{title}</h3>
+      <p className="text-gray-600 mb-10 max-w-lg leading-relaxed text-lg">{description}</p>
       {action && (
-        <Button variant="primary" onClick={action.onClick}>
-          <ApperIcon name={action.icon || "Plus"} className="w-4 h-4 mr-2" />
+        <Button variant="primary" onClick={action.onClick} className="shadow-xl px-8 py-4">
+          <ApperIcon name={action.icon || "Plus"} className="w-5 h-5 mr-3" />
           {action.label}
         </Button>
       )}
